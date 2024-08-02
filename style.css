@@ -14,8 +14,12 @@
 }
 .not-found-content{
     color: rgb(5, 114, 165);
-    font-size: 25px;
-    -webkit-text-stroke: 1px white;
+    font-size: 35px;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 a{
     font-size: 20px;
