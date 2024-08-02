@@ -14,7 +14,8 @@
 }
 .not-found-content{
     color: rgb(5, 114, 165);
-    font-size: 50px;
+    font-size: 25px;
+    -webkit-text-stroke: 1px white;
 }
 a{
     font-size: 20px;
