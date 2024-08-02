@@ -1,4 +1,47 @@
 .roundImage{
     border-radius: 30px;
-    height: 50px;
+    height: 150px;
+}
+
+.loadedText{
+    background-color: gray;
+    border-radius: 10px;
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Use viewport width for consistent full-screen coverage */
+    height: 100vh; /* Use viewport height for consistent full-screen coverage */
+    /* background-image: url("/assets/20231110_153115.jpg"); */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    filter: blur(8px);
+    z-index: -1; /* Make sure the image is behind all content */
+}
+
+.content-holder{
+    background-color: rgba(255, 255, 255, 0.76);
+    margin-top: 5vh;
+    padding: 10px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
 }

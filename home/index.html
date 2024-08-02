@@ -6,8 +6,81 @@
     <title>Home</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-<body>
-    <img class="roundImage" src="../assets/mainPic.png"/>
-    <h1>Hier komt binnenkort een website te staan!</h1>
+<body id="Content">
+    <script>
+        function getAssetURL(url){
+            const origin = window.location.origin;
+            let basePath = window.location.pathname;
+
+            if (basePath.startsWith('/website')) {
+                basePath = '/website';
+            } else {
+                basePath = '';
+            }
+            const fullURL = new URL(`${basePath}${url}`, origin);
+            return fullURL.href;
+        }
+        
+        function openURL(url, target = '_self') {
+            const origin = window.location.origin; // Get the domain part (e.g., "http://localhost" or "http://thijstlam.nl")
+            let basePath = window.location.pathname; // Get the path part (e.g., "/website" or "/")
+
+            // Check if the basePath starts with "/website"
+            if (basePath.startsWith('/website')) {
+                // If so, make sure we only have "/website" and not more parts (e.g., "/website/about")
+                basePath = '/website';
+            } else {
+                // Otherwise, assume the base path is "/"
+                basePath = '';
+            }
+
+            // Create the full URL based on the origin and basePath
+            const fullURL = new URL(`${basePath}${url}`, origin);
+
+            // Open the URL in the specified target
+            window.open(fullURL.href, target);
+        }
+        
+        function loadTextFile() {
+            // Path to the text file (relative to the location of the HTML file)
+            const filePath = getAssetURL("/home/tekstBlok1.txt");
+
+            // Use fetch to get the file content
+            fetch(filePath)
+                .then(response => {
+                    // Check if the request was successful
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text(); // Parse the response as text
+                })
+                .then(htmlContent => {
+                    // Use innerHTML to set the content as HTML
+                    document.getElementById('file-content').innerHTML = htmlContent;
+                })
+                .catch(error => {
+                    // Handle errors (e.g., file not found)
+                    document.getElementById('file-content').textContent = 'Error loading file: ' + error.message;
+                });
+        }
+        // Call the function to load the text file when the page loads
+        window.onload = function() {
+            loadTextFile();
+            var url = getAssetURL("/assets/20231110_153115.jpg");
+            var styleElement = document.createElement('style');
+            styleElement.textContent = `
+                #Content::before {
+                    background-image: url('${url}');
+                }
+            `;
+            document.head.appendChild(styleElement);
+        };
+        // window.onload = loadBackgroundImage;
+    </script>
+    <div class="content-holder">
+        <img class="roundImage" src="../assets/mainPic.png"/>
+        <h1>Hier komt binnenkort een website te staan!</h1>
+        <div id="file-content" class="loadedText">Loading...</div>
+    </div>
 </body>
 </html>

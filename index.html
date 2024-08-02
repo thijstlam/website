@@ -7,7 +7,40 @@
 </head>
 <body>
     <script>
-        document.location.href = "https://thijstlam.nl/home"
+
+        function getAssetURL(url){
+            const origin = window.location.origin;
+            let basePath = window.location.pathname;
+
+            if (basePath.startsWith('/website')) {
+                basePath = '/website';
+            } else {
+                basePath = '';
+            }
+            const fullURL = new URL(`${basePath}${url}`, origin);
+            return fullURL.href;
+        }
+        
+        function openURL(url, target = '_self') {
+            const origin = window.location.origin; // Get the domain part (e.g., "http://localhost" or "http://thijstlam.nl")
+            let basePath = window.location.pathname; // Get the path part (e.g., "/website" or "/")
+
+            // Check if the basePath starts with "/website"
+            if (basePath.startsWith('/website')) {
+                // If so, make sure we only have "/website" and not more parts (e.g., "/website/about")
+                basePath = '/website';
+            } else {
+                // Otherwise, assume the base path is "/"
+                basePath = '';
+            }
+
+            // Create the full URL based on the origin and basePath
+            const fullURL = new URL(`${basePath}${url}`, origin);
+
+            // Open the URL in the specified target
+            window.open(fullURL.href, target);
+        }
+        openURL("/home");
     </script>
 </body>
 </html>
