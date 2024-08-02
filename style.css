@@ -78,6 +78,9 @@ body::before {
 .content-holder.no-background{
     background-color: transparent;
 }
+.content-holder.full-width{
+    width: auto;
+}
 
 .social-media-holder a.whatsapp{
     text-decoration: none;

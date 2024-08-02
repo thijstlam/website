@@ -44,7 +44,8 @@
         
         function loadTextFile() {
             // Path to the text file (relative to the location of the HTML file)
-            const filePath = getAssetURL("/home/tekstBlok1.txt");
+            const filePath = getAssetURL("/about/tekstBlok1.txt");
+            const filePath2 = getAssetURL("/about/tekstBlok2.txt");
 
             // Use fetch to get the file content
             fetch(filePath)
@@ -63,10 +64,26 @@
                     // Handle errors (e.g., file not found)
                     document.getElementById('file-content').textContent = 'Error loading file: ' + error.message;
                 });
+            fetch(filePath2)
+                .then(response => {
+                    // Check if the request was successful
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text(); // Parse the response as text
+                })
+                .then(htmlContent => {
+                    // Use innerHTML to set the content as HTML
+                    document.getElementById('file-content2').innerHTML = htmlContent;
+                })
+                .catch(error => {
+                    // Handle errors (e.g., file not found)
+                    document.getElementById('file-content2').textContent = 'Error loading file: ' + error.message;
+                });
         }
         // Call the function to load the text file when the page loads
         window.onload = function() {
-            // loadTextFile();
+            loadTextFile();
             var url = getAssetURL("/assets/20231110_153115.jpg");
             var styleElement = document.createElement('style');
             styleElement.textContent = `
@@ -79,7 +96,11 @@
         // window.onload = loadBackgroundImage;
     </script>
     <div class="content-holder">
-        <div id="file-content" class="loadedText">Loading...</div>
+        <div class="content-holder row no-background full-width">
+            <img class="roundImage" src="../assets/mainPic.png"/>
+            <div style="padding-left: 15px;" id="file-content" class="loadedText">Loading...</div>
+        </div>
+        <div id="file-content2" class="loadedText">Loading...</div>
     </div>
 </body>
 </html>
