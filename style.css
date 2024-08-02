@@ -1,14 +1,26 @@
 .roundImage{
     border-radius: 30px;
-    height: 150px;
+    height: 300px;
+}
+.big-logo{
+    height: 250px;
 }
 
 .loadedText{
-    background-color: gray;
     border-radius: 10px;
     width: max-content;
     height: max-content;
     padding: 5px;
+}
+.not-found-content{
+    color: rgb(5, 114, 165);
+    font-size: 50px;
+}
+a{
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: blue;
 }
 
 body {
@@ -17,6 +29,8 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 body::before {
@@ -39,9 +53,36 @@ body::before {
     margin-top: 5vh;
     padding: 10px;
     width: 50%;
+    border-radius: 10px;
+}
+.content-holder.centered{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.content-holder.row{
+    background-color: rgba(255, 255, 255, 0.76);
+    margin-top: 5vh;
+    padding: 10px;
+    width: 50%;
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.content-holder.no-background{
+    background-color: transparent;
+}
+
+.social-media-holder a.whatsapp{
+    text-decoration: none;
+    color: green;
+}
+.social-media-holder a.instagram{
+    text-decoration: none;
+    color: purple;
+}
+.social-media-holder a{
+    text-decoration: none;
+    color: black;
 }

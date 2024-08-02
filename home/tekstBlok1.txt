@@ -1,2 +1,5 @@
-<h1>Hoi</h1>
-<p>Dit is een ingeladen bericht</p>
+<h1>Hallo, ik ben Thijs 't Lam</h1>
+<p>Ik heb gewerkt bij DeLaval, EPC en Peek.</p>
+<p>Ik ben per 1 September 2024 een zzp'er geworden!</p>
+<p>Mijn passie is om .....</p>
+<p>Nog meer tekst hier!</p>
