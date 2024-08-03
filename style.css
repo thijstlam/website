@@ -55,7 +55,7 @@ body::before {
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */
     background-attachment: fixed; /* Make the image follow the screen when scrolling */
-    filter: blur(8px);
+    filter: blur(4px);
     z-index: -1; /* Make sure the image is behind all content */
 }
 
