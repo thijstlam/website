@@ -11,6 +11,7 @@
     width: max-content;
     height: max-content;
     padding: 5px;
+    line-height: 1.5;
 }
 .not-found-content{
     color: rgb(5, 114, 165);
@@ -28,10 +29,12 @@ a{
     color: blue;
 }
 
-body {
+html, body {
     margin: 0;
-    overflow: hidden;
-    position: relative;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,25 +43,36 @@ body {
 
 body::before {
     content: '';
-    position: absolute;
+    position: fixed; /* Ensure full coverage */
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100vw; /* Use viewport width for consistent full-screen coverage */
     height: 100vh; /* Use viewport height for consistent full-screen coverage */
     /* background-image: url("/assets/20231110_153115.jpg"); */
     background-size: cover; /* Cover the entire screen */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */
+    background-attachment: fixed; /* Make the image follow the screen when scrolling */
     filter: blur(8px);
     z-index: -1; /* Make sure the image is behind all content */
+}
+
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+    margin: 0; /* Reset margin for all elements */
+    padding: 0; /* Reset padding for all elements */
 }
 
 .content-holder{
     background-color: rgba(255, 255, 255, 0.76);
     margin-top: 5vh;
     padding: 10px;
-    width: 50%;
+    width: 1000px;
     border-radius: 10px;
+    max-width: 100%;
+    margin-bottom: 10px;
 }
 .content-holder.centered{
     display: flex;
@@ -70,7 +84,6 @@ body::before {
     background-color: rgba(255, 255, 255, 0.76);
     margin-top: 5vh;
     padding: 10px;
-    width: 50%;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -82,6 +95,11 @@ body::before {
     width: auto;
 }
 
+.contact-info-holder p{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
 .social-media-holder a.whatsapp{
     text-decoration: none;
     color: green;
@@ -90,7 +108,66 @@ body::before {
     text-decoration: none;
     color: purple;
 }
+.social-media-holder a.linkedin{
+    text-decoration: none;
+    color: rgb(36, 161, 161);
+}
 .social-media-holder a{
     text-decoration: none;
     color: black;
+}
+
+@media screen and (max-width: 1400px) {
+    #main-text-home-page{
+        display: flex;
+        flex-direction: column;
+        margin-top: 300px;
+    }
+    .content-holder{
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .content-holder{
+        width: 500px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .content-holder{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .loadedText{
+        max-width: 80%;
+        padding-left: 10%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .roundImage{
+        height: auto;
+        width: 200px;
+    }
+}
+@media screen and (max-height: 900px) {
+    #main-text-home-page{
+        margin-top: 500px;
+    }
+}
+@media screen and (max-height: 700px) {
+    #main-text-home-page{
+        margin-top: 700px;
+    }
+}
+@media screen and (max-height: 450px) {
+    #main-text-home-page{
+        margin-top: 800px;
+    }
+}
+@media screen and (max-height: 250px) {
+    #main-text-home-page{
+        margin-top: 1000px;
+    }
 }
