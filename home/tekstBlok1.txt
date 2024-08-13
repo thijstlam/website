@@ -1,4 +1,6 @@
-<h1>Welkom op de website van Thijs 't Lam</h1><i>Besturings- en Elektrotechniek</i><br/>
+<h1>Welkom op de website van:</h1>
+<i>Thijs 't Lam</i>
+<i>Besturings- en Elektrotechniek</i><br/>
 <p>Over mij:</p>
 <p>Mijn naam is Thijs 't Lam.</p>
 <p>Mijn woonplaats is Nieuwland (UT).</p> 
