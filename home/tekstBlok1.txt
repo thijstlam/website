@@ -13,4 +13,4 @@
 <i>zoals verkeerslichten, snelwegsignalering, bruggen, sluizen etc</i>
 <p>Mocht je iemand zoeken voor andere werkzaamheden?</p>
 <p>Neem contact met mij op, want mijn motto is;</p> 
-<h1>"alles waar techniek in zit is interessant"</p>
+<h2>"alles waar techniek in zit is interessant"</p>
