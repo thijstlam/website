@@ -1,5 +1,5 @@
 <h1>Welkom op de website van:</h1>
-<i>Thijs 't Lam</i><br/>
+<p>Thijs 't Lam</p><br/>
 <i>Besturings- en Elektrotechniek</i><br/><br/>
 <p>Over mij:</p>
 <p>Mijn naam is Thijs 't Lam.</p>
