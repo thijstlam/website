@@ -8,4 +8,5 @@
 <p>Ook heb ik ervaring in de infratechniek,</p>
 <p>zoals verkeerslichten, snelwegsignalering, bruggen, sluizen</p>
 <p>Zijn er andere werkzaamheden die ik hier niet benoemd heb;</p>
-<h1>mijn motto is "alles waar techniek in zit is interessant"</p>
+<p>mijn motto is;</p> 
+<h1>"alles waar techniek in zit is interessant"</p>
