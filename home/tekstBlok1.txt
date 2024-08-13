@@ -1,5 +1,6 @@
 <h1>Over mij</h1>
 <p>Mijn naam is Thijs 't Lam.</p>
+<p>Mijn woonplaats is Nieuwland (UT).</p> 
 <p>Per 3 Juni 2024 ben ik gestart als zelfstandige (ZZP-er)</p>
 <p>Je kunt mij benaderen voor de volgende werkzaamheden:</p>
 <p>Werkzaamheden aan Elektrotechnische besturingstechniek.</p>
