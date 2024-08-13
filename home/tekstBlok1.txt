@@ -2,8 +2,7 @@
 <p>Mijn naam is Thijs 't Lam.</p>
 <p>Mijn woonplaats is Nieuwland (UT).</p> 
 <p>Per 3 Juni 2024 ben ik gestart als zelfstandige (ZZP-er)</p><br/>
-<p>Je kunt mij benaderen voor de volgende service- en installatie werkzaamheden:</p>
-<p>Werkzaamheden aan:</p>
+<p>Je kunt mij benaderen voor service- en installatie werkzaamheden aan</p>
 <i>Elektrotechnische besturingstechniek.</i>
 <p>Mijn ervaringen liggen in alle voorkomende installaties in de melkveehouderij,</p>
 <i>zoals aan melk-(DeLaval), mest-, voer-, verlichting-, ventilatie-, of drinkwaterinstallaties.</i>
