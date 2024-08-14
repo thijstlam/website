@@ -118,6 +118,40 @@ body::before {
     color: black;
 }
 
+@media screen and (max-width: 1750px) {
+    .downloads{
+        width: 250px !important;
+        height: 180px !important;
+    }
+    .downloads h1{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 1560px) {
+    .downloads{
+        width: 200px !important;
+        height: 170px !important;
+    }
+    .downloads h1{
+        font-size: 25px;
+    }
+    .downloads a span{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 1460px) {
+    .downloads{
+        width: 150px !important;
+        height: 50px  !important;
+    }
+    .downloads h1{
+        display: none;
+    }
+    .downloads a span{
+        font-size: 12px;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     #main-text-home-page{
         display: flex;
@@ -127,8 +161,35 @@ body::before {
     .content-holder{
         width: 700px;
     }
+    .downloads{
+        width: 250px !important;
+    }
+    .downloads a span{
+        font-size: 20px;
+    }
 }
+@media screen and (max-width: 1250px) {
+    .downloads{
+        width: 45px !important;
+        height: 45px !important;
+        background-color: transparent !important;
+    }
+    .downloads a {
+        font-family: 'Font Awesome 5 Free'; /* Make sure Font Awesome is applied */
+        font-weight: 900; /* Font Awesome solid weight */
+        content: '\f019'; /* Unicode for download icon */
+    }
 
+    .downloads a::before {
+        content: '\f019'; /* Font Awesome download icon */
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+
+    .downloads a span {
+        display: none; /* Hide the text */
+    }
+}
 @media screen and (max-width: 900px) {
     .content-holder{
         width: 500px;
@@ -171,4 +232,13 @@ body::before {
     #main-text-home-page{
         margin-top: 1000px;
     }
+}
+
+.downloads {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;  /* You can adjust the width as needed */
+    height: 150px;  /* Same for the height */
+    padding: 10px;
 }
