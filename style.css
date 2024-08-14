@@ -14,6 +14,9 @@
     padding: 5px;
     line-height: 1.5;
 }
+.voorwaarden-mobile{
+    display: none;
+}
 .not-found-content{
     color: rgb(5, 114, 165);
     font-size: 35px;
@@ -113,9 +116,8 @@ body::before {
     text-decoration: none;
     color: rgb(36, 161, 161);
 }
-.social-media-holder a{
-    text-decoration: none;
-    color: black;
+.social-media-holder .voorwaarden-mobile{
+    width: max-content;
 }
 
 @media screen and (max-width: 1750px) {
@@ -171,25 +173,11 @@ body::before {
     }
 }
 @media screen and (max-width: 1250px) {
-    .downloads{
-        width: 45px !important;
-        height: 45px !important;
-        background-color: transparent !important;
+    .downloads {
+        display: none !important;
     }
-    .downloads a {
-        font-family: 'Font Awesome 5 Free'; /* Make sure Font Awesome is applied */
-        font-weight: 900; /* Font Awesome solid weight */
-        content: '\f019'; /* Unicode for download icon */
-    }
-
-    .downloads a::before {
-        content: '\f019'; /* Font Awesome download icon */
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-    }
-
-    .downloads a span {
-        display: none; /* Hide the text */
+    .voorwaarden-mobile{
+        display: block;
     }
 }
 @media screen and (max-width: 900px) {
