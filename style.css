@@ -1,317 +1,122 @@
-.roundImage{
-    border-radius: 30px;
-    height: 300px;
-}
-
-.loadedText{
-    border-radius: 10px;
-    width: max-content;
-    max-width: 90%;
-    height: max-content;
-    padding: 5px;
-    line-height: 1.5;
-}
-.voorwaarden-mobile{
-    display: none;
-}
-.not-found-content{
-    color: rgb(5, 114, 165);
-    font-size: 35px;
-    -webkit-text-stroke: 2px rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-a{
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    color: blue;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
     height: 100%;
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
-body::before {
-    content: '';
-    position: fixed; /* Ensure full coverage */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw; /* Use viewport width for consistent full-screen coverage */
-    height: 100vh; /* Use viewport height for consistent full-screen coverage */
-    /* background-image: url("/assets/20231110_153115.jpg"); */
-    background-size: cover; /* Cover the entire screen */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating */
-    background-attachment: fixed; /* Make the image follow the screen when scrolling */
+.background-image {
+    background: url('./assets/20231110_153115.jpg') no-repeat center center fixed; /* Ensure the background image is set */
+    background-size: cover; /* Cover the entire background */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     filter: blur(3px);
-    z-index: -1; /* Make sure the image is behind all content */
 }
 
-* {
-    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
-    margin: 0; /* Reset margin for all elements */
-    padding: 0; /* Reset padding for all elements */
-}
-
-.content-holder{
-    background-color: rgba(255, 255, 255, 0.50);
-    margin-top: 5vh;
+.content-holder {
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque */
+    margin: 1vh 0; /* Reduced margin */
     padding: 10px;
-    width: 1000px;
+    width: 90%;
+    max-width: 800px; /* Reduced maximum width */
     border-radius: 10px;
-    max-width: 100%;
-    margin-bottom: 10px;
-}
-.content-holder.centered{
-    display: flex;
-    justify-content: center;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack elements vertically */
     align-items: center;
-    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
-.content-holder.row{
-    background-color: rgba(255, 255, 255, 0.76);
-    margin-top: 5vh;
-    padding: 10px;
+
+.content-main {
+    display: flex; /* Enable horizontal layout */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width */
+}
+
+.roundImage {
+    border-radius: 30px;
+    max-width: 200px; /* Set a specific max width */
+    height: auto; 
+    margin-right: 20px; /* Space between image and text */
+}
+
+.loadedText {
     border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-}
-.content-holder.no-background{
-    background-color: transparent;
-}
-.content-holder.full-width{
-    width: auto;
+    width: calc(100% - 220px); /* Take full width minus the image width */
+    padding: 5px;
+    line-height: 1.5;
+    text-align: left; /* Align text to the left */
+    max-width: 90%; /* Limit width for loaded text */
 }
 
-.contact-info-holder p{
-    margin-bottom: 5px;
-    font-weight: bold;
+/* Media Query for screen sizes below 850px */
+@media screen and (max-width: 650px) {
+    .content-main {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items */
+    }
+
+    .roundImage {
+        max-width: 80%; /* Increase image width on smaller screens */
+        margin: 0 0 10px 0; /* Center image and add bottom margin */
+    }
+
+    .loadedText {
+        width: 100%; /* Full width for text */
+        max-width: 90%; /* Maintain some margin */
+    }
 }
 
-.social-media-holder a.whatsapp{
-    text-decoration: none;
-    color: green;
-}
-.social-media-holder a.instagram{
-    text-decoration: none;
-    color: purple;
-}
-.social-media-holder a.linkedin{
-    text-decoration: none;
-    color: rgb(36, 161, 161);
-}
-.social-media-holder .voorwaarden-mobile{
-    width: max-content;
-}
-
-@media screen and (max-width: 1750px) {
-    .downloads{
-        width: 250px !important;
-        height: 180px !important;
-    }
-    .downloads h1{
-        font-size: 28px;
-    }
-}
-@media screen and (max-width: 1560px) {
-    .downloads{
-        width: 200px !important;
-        height: 170px !important;
-    }
-    .downloads h1{
-        font-size: 25px;
-    }
-    .downloads a span{
-        font-size: 17px;
-    }
-}
-@media screen and (max-width: 1460px) {
-    .downloads{
-        width: 150px !important;
-        height: 50px  !important;
-    }
-    .downloads h1{
-        display: none;
-    }
-    .downloads a span{
-        font-size: 12px;
-    }
-}
-#main-text-home-page{
-    margin-top: 300px;
-}
-@media screen and (max-width: 1400px) {
-    #main-text-home-page{
-        display: flex;
-        flex-direction: column;
-        margin-top: 600px;
-    }
-    .content-holder{
-        width: 700px;
-    }
-    .downloads{
-        width: 250px !important;
-    }
-    .downloads a span{
-        font-size: 20px;
-    }
-}
-@media screen and (max-width: 1250px) {
-    .downloads {
-        display: none !important;
-    }
-    .voorwaarden-mobile{
-        display: block;
-    }
-}
-@media screen and (max-width: 900px) {
-    .content-holder{
-        width: 500px;
-    }
-    #main-text-home-page{
-        margin-top: 700px;
-    }
-}
 @media screen and (max-width: 600px) {
-    .content-holder{
-        width: 100%;
+    .content-holder {
+        width: 95%; /* Slightly less than full width */
     }
-}
-
-@media screen and (max-width: 400px) {
-    .loadedText{
-        max-width: 80%;
-        padding-left: 10%;
-    }
-    #main-text-home-page img{
-        margin-top: 50px;
-    }
-}
-@media screen and (max-width: 384px) {
-    #main-text-home-page img{
-        margin-top: 120px;
-    }
-}
-@media screen and (max-width: 350px) {
-    #main-text-home-page img{
-        margin-top: 150px;
-    }
-}
-@media screen and (max-width: 340px) {
-    #main-text-home-page img{
-        margin-top: 200px;
-    }
-}
-@media screen and (max-width: 334px) {
-    #main-text-home-page img{
-        margin-top: 300px;
-    }
-}
-@media screen and (max-width: 318px) {
-    #main-text-home-page img{
-        margin-top: 400px;
-    }
-}
-@media screen and (max-width: 275px) {
-    #main-text-home-page img{
-        margin-top: 500px;
-    }
-}
-@media screen and (max-width: 260px) {
-    #main-text-home-page img{
-        margin-top: 600px;
-    }
-}
-@media screen and (max-width: 245px) {
-    #main-text-home-page img{
-        margin-top: 700px;
-    }
-}
-@media screen and (max-width: 240px) {
-    #main-text-home-page img{
-        margin-top: 800px;
-    }
-}
-@media screen and (max-width: 220px) {
-    #main-text-home-page img{
-        margin-top: 900px;
-    }
-}
-@media screen and (max-width: 220px) {
-    #main-text-home-page img{
-        width: 100%;
-    }
-}
-@media screen and (max-width: 200px) {
-    #main-text-home-page img{
-        margin-top: 1000px;
-    }
-}
-@media screen and (max-width: 175px) {
-    #main-text-home-page img{
-        margin-top: 1100px;
-    }
-}
-@media screen and (max-width: 165px) {
-    #main-text-home-page img{
-        margin-top: 1300px;
-    }
-}
-@media screen and (max-width: 450px) {
-    .roundImage{
-        height: auto;
-        width: 200px;
-    }
-    #main-text-home-page{
-        margin-top: 800px;
-    }
-}
-@media screen and (max-height: 900px) {
-    #main-text-home-page{
-        margin-top: 500px;
-    }
-}
-@media screen and (max-height: 700px) {
-    #main-text-home-page{
-        margin-top: 700px;
-    }
-}
-@media screen and (max-height: 450px) {
-    #main-text-home-page{
-        margin-top: 800px;
-    }
-}
-@media screen and (max-height: 250px) {
-    #main-text-home-page{
-        margin-top: 1000px;
+    .roundImage {
+        width: 100%; /* Ensure full-width on smaller screens */
     }
 }
 
 .downloads {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 350px;  /* You can adjust the width as needed */
-    height: 150px;  /* Same for the height */
-    padding: 10px;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center content */
+    align-items: center; /* Align items vertically */
+    margin-top: 20px; /* Margin for spacing */
 }
 
-p{
-    font-size: 17px;
+.downloads h1 {
+    margin-right: 20px; /* Space between title and button */
 }
-a{
-    font-size: 17px;
+
+.downloads a {
+    text-decoration: none; /* Remove underline */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.downloads a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 850px) {
+    .downloads {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items */
+    }
+
+    .downloads h1 {
+        margin-bottom: 10px; /* Add bottom margin for spacing */
+        margin-right: 0; /* Remove right margin */
+    }
 }
