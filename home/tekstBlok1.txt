@@ -2,9 +2,7 @@
 <h1>Welkom op de website van:</h1>
 <p>Thijs 't Lam</p>
 <i>Besturings- en Elektrotechniek</i><br/><br/>
-<p>Over mij:</p>
-<p>Mijn naam is Thijs 't Lam.</p>
-<p>Ik woon in Nieuwland (UT).</p> 
+
 
 <p>Je kunt mij benaderen voor service- en installatiewerkzaamheden in de</p>
 <i>Elektrotechnische besturingstechniek.</i>
